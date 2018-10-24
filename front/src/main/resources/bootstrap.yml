@@ -3,4 +3,12 @@ spring:
     name: front
   cloud:
     config:
-      uri: http://localhost:8888/config
+      uri: http://localhost:8887/
+      discovery:
+        enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8887/eureka
+logging:
+  config: ${spring.cloud.config.uri}configserver/${spring.application.name}/${spring.profiles.active:default}/${spring.cloud.config.label:master}/logback-spring.xml

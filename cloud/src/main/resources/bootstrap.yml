@@ -1,0 +1,27 @@
+logging:
+  level:
+    ROOT: INFO
+    com.rabajaba: DEBUG
+
+server:
+  port: 8886
+
+# property resolver settings
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      uri: http://localhost:8887
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/Rabajaba/cloud-properties
+          username: Rabajaba
+          password: 16729438
+          searchPaths: configs
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8887/eureka

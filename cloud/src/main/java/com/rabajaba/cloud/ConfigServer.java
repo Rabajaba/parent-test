@@ -10,14 +10,9 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableConfigServer
-@EnableDiscoveryClient(autoRegister = false)
+@EnableDiscoveryClient
 public class ConfigServer {
     public static void main(String[] args) {
         SpringApplication.run(ConfigServer.class, args);
-    }
-
-    @Bean
-    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> webServerFactoryCustomizer() {
-        return factory -> factory.setContextPath("/config");
     }
 }
