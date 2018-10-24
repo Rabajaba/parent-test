@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: discovery
+  cloud:
+    config:
+      uri: http://localhost:8888/config
+server:
+  port: 8887
+
+### service discovery server settings
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    com.netflix.eureka: ERROR
+    com.netflix.discovery: ERROR
