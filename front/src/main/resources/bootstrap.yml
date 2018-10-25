@@ -10,5 +10,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8887/eureka
-logging:
-  config: ${spring.cloud.config.uri}configserver/${spring.application.name}/${spring.profiles.active:default}/${spring.cloud.config.label:master}/logback-spring.xml
+#logging:
+#  config: ${spring.cloud.config.uri}configserver/${spring.application.name}/${spring.profiles.active:default}/${spring.cloud.config.label:master}/logback-spring.xml

@@ -1,0 +1,17 @@
+logging:
+  level:
+    ROOT: INFO
+    com.rabajaba: DEBUG
+
+server:
+  port: 8885
+
+spring:
+  application:
+    name: zuul-server
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8887/eureka
