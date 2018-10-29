@@ -13,6 +13,7 @@
         <module>discovery</module>
         <module>zuul</module>
         <module>front</module>
+        <module>back</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
